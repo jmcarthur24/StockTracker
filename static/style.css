@@ -1,0 +1,203 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333333;
+}
+
+/* Centered container with modern style */
+.container {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Title styling */
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1::before {
+  content: "📈";
+  margin-right: 10px;
+}
+
+/* Add stock input form */
+form {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input {
+  padding: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  width: 70%;
+  font-size: 1.1em;
+  background: #ffffff;
+  color: #333333;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+input::placeholder {
+  color: #999999;
+}
+
+/* Add button */
+button {
+  padding: 15px 20px;
+  border: none;
+  background: #4a90e2;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #3a78c0;
+}
+
+/* List of stocks */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li + li {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 15px;
+}
+
+/* Stock Ticker Links */
+.ticker {
+  flex: 1;
+  text-align: left;
+}
+
+.ticker a {
+  color: #4a90e2;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ticker a:hover {
+  color: #333333; /* Darker text on hover */
+  text-decoration: underline;
+}
+
+/* Stock Price Styling */
+.price {
+  flex: 1;
+  font-size: 1.2em;
+  color: #333333;
+  text-align: center;
+}
+
+/* Remove Button */
+.remove-btn {
+  background: #ff6f61;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #e65c50;
+}
+
+/* News Section Styling */
+.news-section {
+  margin: 30px auto;
+  text-align: center;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* News Section Header */
+.news-section h2 {
+  font-size: 1.8em;
+  color: #333333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* News List */
+.news-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual News Items */
+.news-section li {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* News Link Styling */
+.news-section a {
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.news-section li:hover {
+  transform: scale(1.02);
+  background-color: #eaf6ff;
+}
+
+.news-section a:hover {
+  color: #333333;
+}
+
+/* Visited Link Styling */
+.news-section a:visited {
+  color: #6a6a6a;
+}

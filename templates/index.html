@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Prices and News!</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📈 Stock Prices and News!</h1>
+      <form method="POST" action="/add_favorite">
+        <input
+          type="text"
+          name="ticker"
+          placeholder="Add Stock Ticker (e.g., AAPL)"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+
+      <h2>Your Favorite Stocks</h2>
+      <h5>Click each ticker to learn more</h5>
+      <ul>
+        {% for stock in favorite_stocks %}
+        <li>
+          <span>
+            <span class="ticker"
+              ><a href="/details/{{ stock.ticker }}"
+                >{{ stock.ticker }}</a
+              ></span
+            >
+            <span class="price">${{ stock.price }}</span>
+          </span>
+          <form method="POST" action="/remove_favorite" style="display: inline">
+            <input type="hidden" name="ticker" value="{{ stock.ticker }}" />
+            <button type="submit" class="remove-btn">Remove</button>
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
